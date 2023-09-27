@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Workflow Basic imports</Title>
+      <Author>João Ayres</Author>
+      <Description>Cria um snippets para custom workflow.
+      </Description>
+      <HelpUrl>
+      </HelpUrl>
+    </Header>
+    <Snippet>
+        <Code Language="CSharp">
+        <![CDATA[
+              ITracingService tracingService = executionContext.GetExtension<ITracingService>();          
+              IWorkflowContext context = executionContext.GetExtension<IWorkflowContext>();
+              IOrganizationServiceFactory serviceFactory = executionContext.GetExtension<IOrganizationServiceFactory>();
+              IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
